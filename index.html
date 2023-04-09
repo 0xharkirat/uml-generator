@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>UML Generator</title>
+</head>
+<body>
+  <h1>UML Generator</h1>
+  <form id="class-form">
+    <label for="class-name">Class Name: </label>
+    <input type="text" id="class-name" name="class-name" required><br><br>
+    <fieldset>
+      <legend>Fields:</legend>
+      <div id="fields-container">
+        <label for="field1">Field 1:</label>
+        <input type="text" id="field1" name="field1">
+        <label>Public<input type="radio" name="field1-access" value="public"></label>
+        <label>Private<input type="radio" name="field1-access" value="private"></label>
+		<label for="field1-type">Type:</label>
+		<select name="field1-type" id="field1-type">
+			<option value="byte">byte</option>
+			<option value="short">short</option>
+			<option value="int">int</option>
+			<option value="long">long</option>
+			<option value="float">float</option>
+			<option value="double">double</option>
+			<option value="boolean">boolean</option>
+			<option value="char">char</option>
+			<option value="String">String</option>
+		  </select>
+        <br>
+      </div>
+      <button type="button" id="add-field">Add Field</button>
+    </fieldset>
+    <fieldset>
+      <legend>Methods:</legend>
+      <div id="methods-container">
+        <label for="method1">Method 1:</label>
+        <input type="text" id="method1" name="method1">
+        <label>Public<input type="radio" name="method1-access" value="public"></label>
+        <label>Private<input type="radio" name="method1-access" value="private"></label>
+		<label for="method1-type">Return Type:</label>
+		<select name="method1-type" id="method1-type">
+			<option value="void">void</option>
+			<option value="byte">byte</option>
+			<option value="short">short</option>
+			<option value="int">int</option>
+			<option value="long">long</option>
+			<option value="float">float</option>
+			<option value="double">double</option>
+			<option value="boolean">boolean</option>
+			<option value="char">char</option>
+			<option value="String">String</option>
+		  </select>
+        <br>
+      </div>
+      <button type="button" id="add-method">Add Method</button>
+    </fieldset>
+    <br>
+    <button type="submit">Generate UML Diagram</button>
+  </form>
+  <div id="table-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>
